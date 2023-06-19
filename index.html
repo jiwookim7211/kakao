@@ -1,28 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <body>
-      <!-- 지도를 표시할 div 입니다 -->
-      <div id="map" style="width:100%;height:350px;"></div>
-      
-      <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=6304186388c4dcaf04316228175dda24"></script>
-      <script>
-      var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
-        mapOption = { 
-          center: new kakao.maps.LatLng(35.9460546, 126.6821658), // 지도의 중심좌표
-          level: 3 // 지도의 확대 레벨
-        };
-      
-      // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
-      var map = new kakao.maps.Map(mapContainer, mapOption); 
-      var markerPosition = new kakao.maps.LatLng(35.9460546, 126.6821658);
-      var marker = new kakao.maps.Marker({
-        position: markerPosition
-      });
-      marker.setMap(map);
-      </script>
-      </body>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>Naver 지도 표시하기</title>
+</head>
+
+<body>
+  <!-- 지도를 표시할 div 입니다 -->
+  <div id="map" style="width:100%;height:350px;"></div>
+  
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=6304186388c4dcaf04316228175dda24"></script>
+  <script>
+  var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+    mapOption = { 
+      center: new kakao.maps.LatLng(35.9460546, 126.6821658), // 지도의 중심좌표
+      level: 3 // 지도의 확대 레벨
+    };
+  
+  // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
+  var map = new kakao.maps.Map(mapContainer, mapOption); 
+  var markerPosition = new kakao.maps.LatLng(35.9460546, 126.6821658);
+  var marker = new kakao.maps.Marker({
+    position: markerPosition
+  });
+  marker.setMap(map);
+  </script>
+  </body>
+
 </html>
